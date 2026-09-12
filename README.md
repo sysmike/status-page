@@ -4,6 +4,12 @@ Uptime monitoring that runs entirely on GitHub: checks run as a scheduled
 Action, history is committed to this repository, outages open and close GitHub
 issues, and the status page is published with GitHub Pages.
 
+![Status page](.screenshots/dark.png)
+
+| Light | Response time | Mobile |
+| --- | --- | --- |
+| [![Light theme](.screenshots/light.png)](.screenshots/light.png) | [![Response time chart](.screenshots/response-time.png)](.screenshots/response-time.png) | [![Mobile](.screenshots/mobile.png)](.screenshots/mobile.png) |
+
 ## Setup
 
 1. Fork or copy this repository.

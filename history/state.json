@@ -1,0 +1,44 @@
+{
+  "backupmx": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  },
+  "blog": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  },
+  "umami": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  },
+  "cswiki": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  },
+  "mail": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  },
+  "teamspeak": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  },
+  "vcard": {
+    "status": "up",
+    "since": "2026-09-12T03:09:21Z",
+    "failures": 0,
+    "issue": null
+  }
+}

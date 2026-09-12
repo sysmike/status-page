@@ -111,7 +111,7 @@ response times. Set `link` if the card should point somewhere anyway. Adding
    issue on recovery, and writes a snapshot of recent incidents.
 3. The history is committed back to the branch.
 4. If any monitor changed state, the Pages workflow deploys immediately;
-   otherwise the site rebuilds on its own 15 minute schedule.
+   otherwise the site rebuilds on its own 30 minute schedule.
 
 `.github/workflows/pages.yml` runs `scripts/build.mjs`, which turns the history
 into `_site/api/*.json` next to the static page in `site/`.
@@ -149,7 +149,7 @@ workflows pass in from the Actions `vars` and `secrets` contexts.
   60 days.
 - Actions minutes are free on public repositories. On a private repository
   every job is rounded up to a whole minute, so the cost follows the number of
-  runs, not their duration: the default schedule is roughly 384 job-minutes a
+  runs, not their duration: the default schedule is roughly 336 job-minutes a
   day. Lengthen the two cron expressions to cut that, or keep the repository
   public and define sensitive monitors as secrets.
 - The workflows use the Node.js that ships with the runner image, currently

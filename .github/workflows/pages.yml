@@ -4,7 +4,7 @@ on:
   workflow_call:
   workflow_dispatch:
   schedule:
-    - cron: '*/15 * * * *'
+    - cron: '*/30 * * * *'
   push:
     branches: [main]
     paths:

@@ -47,7 +47,7 @@ jobs:
           done
           exit 1
 
-  # Pages also rebuilds on its own 15 minute schedule; this keeps outages from
+  # Pages also rebuilds on its own 30 minute schedule; this keeps outages from
   # waiting for that tick.
   deploy:
     needs: check

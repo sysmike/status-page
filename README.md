@@ -168,3 +168,7 @@ workflows pass in from the Actions `vars` and `secrets` contexts.
   share of successful checks.
 - Checks run from GitHub's runners, so they only see outages that are visible
   from the public internet.
+
+## License
+
+MIT — see [LICENSE](LICENSE).

@@ -147,6 +147,13 @@ workflows pass in from the Actions `vars` and `secrets` contexts.
 - Scheduled workflows are queued, not guaranteed: runs drift by several minutes
   under load, and GitHub disables schedules in repositories with no activity for
   60 days.
+- Actions minutes are free on public repositories. On a private repository
+  every job is rounded up to a whole minute, so the cost follows the number of
+  runs, not their duration: the default schedule is roughly 384 job-minutes a
+  day. Lengthen the two cron expressions to cut that, or keep the repository
+  public and define sensitive monitors as secrets.
+- The workflows use the Node.js that ships with the runner image, currently
+  22.x, so there is no toolchain setup step.
 - Uptime percentages count degraded checks as up; the day tooltip shows the
   share of successful checks.
 - Checks run from GitHub's runners, so they only see outages that are visible

@@ -2,7 +2,8 @@
 // secrets.
 //
 // Every monitor is its own repository variable named MONITOR_<SLUG>. The value
-// is either a bare URL or a JSON object with per-monitor options. A monitor
+// is either a bare URL or a JSON object with per-monitor options. An http(s)
+// URL is requested; a tcp://host:port URL is checked by opening a connection. A monitor
 // defined as a secret instead of a variable is private by default: its URL is
 // kept out of the published site and out of incident issues.
 
@@ -75,7 +76,8 @@ export function redact(text, url) {
   }
   let result = text.split(url).join('[redacted]');
   if (host) result = result.replace(new RegExp(host.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '[redacted]');
-  return result;
+  // Connection errors quote the resolved address rather than the host name.
+  return result.replace(/\b\d{1,3}(?:\.\d{1,3}){3}\b|\[[0-9a-f:]+\]/gi, '[redacted]');
 }
 
 // `vars` and `secrets` are the JSON serializations of the Actions contexts of
@@ -92,10 +94,16 @@ export function loadConfig(varsJson, secretsJson) {
     if (!parsed.url) throw new Error(`Variable ${name} has no url`);
 
     const slug = slugify(parsed.slug || name.slice(MONITOR_PREFIX.length));
+    const type = parsed.url.startsWith('tcp://') ? 'tcp' : 'http';
+    if (type === 'tcp' && !new URL(parsed.url).port) {
+      throw new Error(`Monitor ${name} needs a port, for example tcp://example.com:443`);
+    }
+
     monitors.push({
       ...DEFAULTS,
       ...parsed,
       slug,
+      type,
       name: parsed.name || titleize(slug),
       method: String(parsed.method || DEFAULTS.method).toUpperCase(),
       group: parsed.group || null,

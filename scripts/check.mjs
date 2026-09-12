@@ -2,10 +2,37 @@
 // scripts/.results.json for the incident step.
 
 import { writeFileSync } from 'node:fs';
+import { connect } from 'node:net';
 import { loadConfig, redact, statusMatches } from './lib/config.mjs';
 import { appendResult } from './lib/history.mjs';
 
-async function request(monitor) {
+// Opens a TCP connection and times how long the handshake took. With a
+// keyword set it also waits for the first chunk the server sends, which is
+// how a banner protocol such as SMTP or SSH gets verified.
+function tcpRequest(monitor) {
+  const { hostname, port } = new URL(monitor.url);
+  return new Promise((resolve, reject) => {
+    const started = performance.now();
+    const socket = connect({ host: hostname, port: Number(port) });
+    const elapsed = () => Math.round(performance.now() - started);
+    const done = (fn, value) => {
+      socket.destroy();
+      fn(value);
+    };
+
+    socket.setTimeout(monitor.timeout);
+    socket.once('timeout', () =>
+      done(reject, Object.assign(new Error(`timeout after ${monitor.timeout}ms`), { timeout: true })),
+    );
+    socket.once('error', (error) => done(reject, error));
+    socket.once('connect', () => {
+      if (!monitor.keyword) done(resolve, { code: 0, ms: elapsed(), text: '' });
+    });
+    socket.once('data', (chunk) => done(resolve, { code: 0, ms: elapsed(), text: chunk.toString('utf8') }));
+  });
+}
+
+async function httpRequest(monitor) {
   const controller = new AbortController();
   const timer = setTimeout(() => controller.abort(), monitor.timeout);
   const started = performance.now();
@@ -24,12 +51,14 @@ async function request(monitor) {
   }
 }
 
+const request = (monitor) => (monitor.type === 'tcp' ? tcpRequest(monitor) : httpRequest(monitor));
+
 async function check(monitor) {
   let last;
   for (let attempt = 0; attempt <= monitor.retries; attempt += 1) {
     try {
       const { code, ms, text } = await request(monitor);
-      if (!statusMatches(code, monitor.expectedStatus)) {
+      if (monitor.type === 'http' && !statusMatches(code, monitor.expectedStatus)) {
         last = { status: 'down', code, ms, error: `unexpected status ${code}` };
       } else if (monitor.keyword && !text.includes(monitor.keyword)) {
         last = { status: 'down', code, ms, error: `keyword "${monitor.keyword}" not found` };
@@ -39,12 +68,14 @@ async function check(monitor) {
         return { status: 'up', code, ms, error: null };
       }
     } catch (error) {
-      const aborted = error.name === 'AbortError' || error.name === 'TimeoutError';
+      const aborted = error.timeout || error.name === 'AbortError' || error.name === 'TimeoutError';
       last = {
         status: 'down',
         code: 0,
         ms: 0,
-        error: aborted ? `timeout after ${monitor.timeout}ms` : String(error.cause?.message || error.message),
+        error: aborted
+          ? `timeout after ${monitor.timeout}ms`
+          : String(error.cause?.message || error.message),
       };
     }
   }

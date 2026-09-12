@@ -82,7 +82,7 @@ const summaryMonitors = monitors.map((monitor) => {
   return {
     slug: monitor.slug,
     name: monitor.name,
-    url: monitor.private ? monitor.link : monitor.link || monitor.url,
+    url: monitor.private ? monitor.link : monitor.link || (monitor.type === 'http' ? monitor.url : null),
     group: monitor.group,
     description: monitor.description,
     status: state[monitor.slug]?.status || latest?.status || 'none',

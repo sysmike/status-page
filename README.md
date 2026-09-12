@@ -53,17 +53,27 @@ plain URL or a JSON object.
 ```
 MONITOR_WEBSITE   https://example.com
 MONITOR_API       {"name":"Public API","url":"https://api.example.com/health","keyword":"ok","group":"Core"}
+MONITOR_SMTP      {"name":"Mail","url":"tcp://mail.example.com:25","keyword":"220"}
 ```
+
+An `http` or `https` URL is requested over HTTP. A `tcp://host:port` URL is
+checked by opening a connection: the monitor is up when the handshake
+completes, and the measured time is the handshake itself. With `keyword` set,
+the check also waits for the first chunk the server sends and matches it
+against that string, which covers banner protocols such as SMTP, SSH or IMAP.
+`method`, `headers`, `body`, `expectedStatus` and `followRedirects` do not
+apply to a TCP monitor, and its address is not used as the card link — set
+`link` if the card should point somewhere.
 
 | Key | Default | Description |
 | --- | --- | --- |
-| `url` | required | URL to request |
+| `url` | required | `https://…` to request, or `tcp://host:port` to connect to |
 | `name` | derived from the variable name | Display name |
 | `method` | `GET` | HTTP method |
 | `headers` | `{}` | Request headers |
 | `body` | none | Request body |
 | `expectedStatus` | `2xx` | Status code, `2xx` style pattern, `200-299` range, or an array of those |
-| `keyword` | none | Response body must contain this string |
+| `keyword` | none | Response body, or the first chunk of a TCP banner, must contain this string |
 | `timeout` | `10000` | Milliseconds before the request is aborted |
 | `retries` | `1` | Extra attempts before a check counts as failed |
 | `degradedMs` | `0` | Responses slower than this are reported as degraded (`0` disables) |

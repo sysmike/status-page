@@ -1,1 +1,16 @@
-[]
+[
+  {
+    "number": 1,
+    "title": "Maintenance: Updating Mailcow",
+    "url": "https://github.com/sysmike/status-page/issues/1",
+    "state": "open",
+    "createdAt": "2026-09-12T03:31:31Z",
+    "closedAt": null,
+    "labels": [
+      "status",
+      "maintenance"
+    ],
+    "monitor": null,
+    "maintenance": true
+  }
+]

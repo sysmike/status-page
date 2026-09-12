@@ -1,0 +1,70 @@
+{
+  "generatedAt": "2026-09-12T10:51:37.263Z",
+  "monitors": {
+    "backupmx": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 953,
+      "lastCode": 200,
+      "since": "2026-09-12T03:09:21Z"
+    },
+    "blog": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 587,
+      "lastCode": 200,
+      "since": "2026-09-12T03:09:21Z"
+    },
+    "umami": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 772,
+      "lastCode": 200,
+      "since": "2026-09-12T03:09:21Z"
+    },
+    "cswiki": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 722,
+      "lastCode": 200,
+      "since": "2026-09-12T03:09:21Z"
+    },
+    "mail": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 1927,
+      "lastCode": 200,
+      "since": "2026-09-12T03:09:21Z"
+    },
+    "teamspeak": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 318,
+      "lastCode": 0,
+      "since": "2026-09-12T03:09:21Z"
+    },
+    "vcard": {
+      "status": "up",
+      "lastCheck": "2026-09-12T10:51:30Z",
+      "lastMs": 630,
+      "lastCode": 200,
+      "since": "2026-09-12T03:09:21Z"
+    }
+  },
+  "incidents": [
+    {
+      "number": 1,
+      "title": "Maintenance: Updating Mailcow",
+      "url": "https://github.com/sysmike/status-page/issues/1",
+      "state": "closed",
+      "createdAt": "2026-09-12T03:31:31Z",
+      "closedAt": "2026-09-12T10:02:03Z",
+      "labels": [
+        "status",
+        "maintenance"
+      ],
+      "monitor": null,
+      "maintenance": true
+    }
+  ]
+}

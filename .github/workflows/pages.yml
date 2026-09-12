@@ -41,6 +41,7 @@ jobs:
       - name: Build site
         env:
           CONFIG_VARS: ${{ toJSON(vars) }}
+          CONFIG_SECRETS: ${{ toJSON(secrets) }}
         run: node scripts/build.mjs
 
       - uses: actions/configure-pages@v5

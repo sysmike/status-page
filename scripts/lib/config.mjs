@@ -1,7 +1,10 @@
-// Reads monitor and site configuration out of GitHub Actions variables.
+// Reads monitor and site configuration out of GitHub Actions variables and
+// secrets.
 //
 // Every monitor is its own repository variable named MONITOR_<SLUG>. The value
-// is either a bare URL or a JSON object with per-monitor options.
+// is either a bare URL or a JSON object with per-monitor options. A monitor
+// defined as a secret instead of a variable is private by default: its URL is
+// kept out of the published site and out of incident issues.
 
 const MONITOR_PREFIX = 'MONITOR_';
 
@@ -59,12 +62,30 @@ export function statusMatches(code, expected) {
   });
 }
 
-// `vars` is the JSON serialization of the Actions `vars` context.
-export function loadConfig(varsJson) {
+// Replaces every occurrence of a private URL, and of its host on its own, with
+// a placeholder. Network errors quote the host, so the message needs scrubbing
+// before it reaches an issue.
+export function redact(text, url) {
+  if (!text) return text;
+  let host = '';
+  try {
+    host = new URL(url).host;
+  } catch {
+    host = '';
+  }
+  let result = text.split(url).join('[redacted]');
+  if (host) result = result.replace(new RegExp(host.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi'), '[redacted]');
+  return result;
+}
+
+// `vars` and `secrets` are the JSON serializations of the Actions contexts of
+// the same name.
+export function loadConfig(varsJson, secretsJson) {
   const vars = JSON.parse(varsJson || '{}');
+  const secrets = JSON.parse(secretsJson || '{}');
   const monitors = [];
 
-  for (const [name, raw] of Object.entries(vars)) {
+  for (const [name, raw] of Object.entries({ ...vars, ...secrets })) {
     if (!name.startsWith(MONITOR_PREFIX)) continue;
     const parsed = parseValue(name, raw);
     if (!parsed) continue;
@@ -81,6 +102,7 @@ export function loadConfig(varsJson) {
       description: parsed.description || null,
       headers: parsed.headers || {},
       link: parsed.link || null,
+      private: parsed.private ?? Object.hasOwn(secrets, name),
     });
   }
 

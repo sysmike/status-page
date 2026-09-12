@@ -27,12 +27,14 @@ jobs:
       - name: Run checks
         env:
           CONFIG_VARS: ${{ toJSON(vars) }}
+          CONFIG_SECRETS: ${{ toJSON(secrets) }}
         run: node scripts/check.mjs
 
       - name: Update incidents
         id: incidents
         env:
           CONFIG_VARS: ${{ toJSON(vars) }}
+          CONFIG_SECRETS: ${{ toJSON(secrets) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: node scripts/incidents.mjs
 
@@ -59,3 +61,5 @@ jobs:
       pages: write
       id-token: write
     uses: ./.github/workflows/pages.yml
+    # Monitors may be defined as secrets, which the build needs to name them.
+    secrets: inherit

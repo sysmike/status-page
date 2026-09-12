@@ -2,7 +2,7 @@
 // scripts/.results.json for the incident step.
 
 import { writeFileSync } from 'node:fs';
-import { loadConfig, statusMatches } from './lib/config.mjs';
+import { loadConfig, redact, statusMatches } from './lib/config.mjs';
 import { appendResult } from './lib/history.mjs';
 
 async function request(monitor) {
@@ -51,7 +51,7 @@ async function check(monitor) {
   return last;
 }
 
-const { monitors } = loadConfig(process.env.CONFIG_VARS);
+const { monitors } = loadConfig(process.env.CONFIG_VARS, process.env.CONFIG_SECRETS);
 if (monitors.length === 0) {
   console.log('No MONITOR_* variables configured.');
 }
@@ -59,9 +59,18 @@ if (monitors.length === 0) {
 const timestamp = new Date().toISOString().replace(/\.\d+Z$/, 'Z');
 const results = [];
 
+// A private monitor never hands its URL on: results feed the incident issues
+// and the published site, so this is the single place to strip it.
 for (const monitor of monitors) {
   const outcome = await check(monitor);
-  const result = { slug: monitor.slug, name: monitor.name, url: monitor.url, timestamp, ...outcome };
+  const result = {
+    slug: monitor.slug,
+    name: monitor.name,
+    url: monitor.private ? monitor.link : monitor.url,
+    timestamp,
+    ...outcome,
+    error: monitor.private ? redact(outcome.error, monitor.url) : outcome.error,
+  };
   appendResult(monitor.slug, result);
   results.push(result);
   console.log(

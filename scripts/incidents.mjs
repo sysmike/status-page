@@ -29,7 +29,7 @@ function duration(from, to) {
   return `${Math.floor(hours / 24)}d ${hours % 24}h`;
 }
 
-const { incidents: settings } = loadConfig(process.env.CONFIG_VARS);
+const { incidents: settings } = loadConfig(process.env.CONFIG_VARS, process.env.CONFIG_SECRETS);
 const results = readJson(RESULTS_FILE, []);
 const state = readJson(STATE_FILE, {});
 let changed = false;
@@ -60,13 +60,15 @@ for (const result of results) {
           marker(result.slug),
           `**${result.name}** stopped responding as expected.`,
           '',
-          `- URL: ${result.url}`,
+          result.url ? `- URL: ${result.url}` : null,
           `- Error: ${result.error || 'unknown'}`,
           `- Response code: ${result.code || 'none'}`,
           `- First failure: ${previous.status === 'down' ? previous.since : result.timestamp}`,
           '',
           'This issue closes automatically once the monitor recovers.',
-        ].join('\n'),
+        ]
+          .filter((line) => line !== null)
+          .join('\n'),
       },
     });
     console.log(`opened #${created.number} for ${result.slug}`);

@@ -40,7 +40,7 @@ function uptime(days) {
   return Math.round((ok / checks) * 10000) / 100;
 }
 
-const { site, monitors } = loadConfig(process.env.CONFIG_VARS);
+const { site, monitors } = loadConfig(process.env.CONFIG_VARS, process.env.CONFIG_SECRETS);
 const state = readJson('history/state.json', {});
 const incidents = readJson('history/incidents.json', []);
 const keys = dayKeys(DAYS);
@@ -82,7 +82,7 @@ const summaryMonitors = monitors.map((monitor) => {
   return {
     slug: monitor.slug,
     name: monitor.name,
-    url: monitor.link || monitor.url,
+    url: monitor.private ? monitor.link : monitor.link || monitor.url,
     group: monitor.group,
     description: monitor.description,
     status: state[monitor.slug]?.status || latest?.status || 'none',

@@ -17,7 +17,8 @@ issues, and the status page is published with GitHub Pages.
 3. **Settings → Actions → General → Workflow permissions**: select *Read and
    write permissions*.
 4. Add one repository variable per monitor under **Settings → Secrets and
-   variables → Actions → Variables** (see below).
+   variables → Actions → Variables** (see below), or a secret in the same place
+   for a monitor whose URL should stay private.
 5. Run the **Uptime** workflow once from the Actions tab.
 
 ## Custom domain
@@ -70,8 +71,22 @@ MONITOR_API       {"name":"Public API","url":"https://api.example.com/health","k
 | `group` | none | Groups monitors under a heading |
 | `description` | none | Subtitle on the card |
 | `link` | `url` | Link target of the monitor name |
+| `private` | `false`, `true` for secrets | Keeps the URL out of the published site and out of incident issues |
 | `order` | `100` | Sort order within a group |
 | `slug` | derived from the variable name | Overrides the slug used for history files |
+
+### Private monitors
+
+A monitor can be defined as a repository **secret** instead of a variable, with
+the same name and the same value format. Secrets are masked in workflow logs,
+and a monitor defined that way is private: its URL is left out of
+`api/summary.json`, left out of the incident issue, and stripped from error
+messages such as `getaddrinfo ENOTFOUND …`.
+
+What is still published for a private monitor: the slug derived from the secret
+name, the display name, the group and description, and the status, uptime and
+response times. Set `link` if the card should point somewhere anyway. Adding
+`"private": true` to a monitor defined as a variable has the same effect.
 
 ## Site variables
 
@@ -122,8 +137,9 @@ node scripts/build.mjs
 npx serve _site
 ```
 
-`CONFIG_VARS` is the JSON object that the workflows pass in from the Actions
-`vars` context. `scripts/incidents.mjs` additionally needs `GITHUB_TOKEN` and
+`CONFIG_VARS` and the optional `CONFIG_SECRETS` are the JSON objects that the
+workflows pass in from the Actions `vars` and `secrets` contexts.
+`scripts/incidents.mjs` additionally needs `GITHUB_TOKEN` and
 `GITHUB_REPOSITORY`.
 
 ## Notes

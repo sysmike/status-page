@@ -1,45 +1,59 @@
 {
-  "generatedAt": "2026-09-12T19:32:42.032Z",
+  "generatedAt": "2026-09-12T21:13:30.585Z",
   "monitors": {
+    "home": {
+      "status": "up",
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 0,
+      "lastCode": 0,
+      "since": "2026-09-12T21:13:25Z"
+    },
+    "pangolin": {
+      "status": "up",
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 0,
+      "lastCode": 0,
+      "since": "2026-09-12T21:13:25Z"
+    },
     "backupmx": {
       "status": "up",
-      "lastCheck": "2026-09-12T19:32:37Z",
-      "lastMs": 690,
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 850,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "blog": {
       "status": "up",
-      "lastCheck": "2026-09-12T19:32:37Z",
-      "lastMs": 562,
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 627,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "mail": {
       "status": "up",
-      "lastCheck": "2026-09-12T19:32:37Z",
-      "lastMs": 219,
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 237,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "teamspeak": {
       "status": "up",
-      "lastCheck": "2026-09-12T19:32:37Z",
-      "lastMs": 291,
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 320,
       "lastCode": 0,
       "since": "2026-09-12T03:09:21Z"
     },
     "umami": {
       "status": "up",
-      "lastCheck": "2026-09-12T19:32:37Z",
-      "lastMs": 573,
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 805,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "vcard": {
       "status": "up",
-      "lastCheck": "2026-09-12T19:32:37Z",
-      "lastMs": 816,
+      "lastCheck": "2026-09-12T21:13:25Z",
+      "lastMs": 922,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     }

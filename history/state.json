@@ -40,5 +40,17 @@
     "since": "2026-09-12T03:09:21Z",
     "failures": 0,
     "issue": null
+  },
+  "home": {
+    "status": "up",
+    "since": "2026-09-12T21:13:25Z",
+    "failures": 0,
+    "issue": null
+  },
+  "pangolin": {
+    "status": "up",
+    "since": "2026-09-12T21:13:25Z",
+    "failures": 0,
+    "issue": null
   }
 }

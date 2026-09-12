@@ -137,8 +137,8 @@ body {
   }
 }
 
-main {
-  padding-top: 28px;
+main.shell {
+  padding-top: 36px;
   padding-bottom: 40px;
 }
 

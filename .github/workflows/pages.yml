@@ -30,7 +30,7 @@ jobs:
     steps:
       # Checks out the branch head so the history committed by the Uptime
       # workflow moments earlier is included.
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
         with:
           ref: ${{ github.ref_name }}
 
@@ -40,9 +40,9 @@ jobs:
           CONFIG_SECRETS: ${{ toJSON(secrets) }}
         run: node scripts/build.mjs
 
-      - uses: actions/configure-pages@v5
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/configure-pages@v6
+      - uses: actions/upload-pages-artifact@v5
         with:
           path: _site
       - id: deploy
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@v5

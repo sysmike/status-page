@@ -11,6 +11,11 @@
       "maintenance"
     ],
     "monitor": null,
+    "monitors": [
+      "backupmx",
+      "mail"
+    ],
+    "body": "### Window\n\n2026-09-12 06:00 - 06:05 UTC\n\n### Expected impact\n\nMailservers unavailable for 5 minutes\n\n### Affected monitors\n\nBACKUPMX, MAIL\n\n### Notes\n\n_No response_",
     "maintenance": true
   }
 ]

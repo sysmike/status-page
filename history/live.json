@@ -1,52 +1,52 @@
 {
-  "generatedAt": "2026-09-12T10:51:37.263Z",
+  "generatedAt": "2026-09-12T11:34:07.252Z",
   "monitors": {
     "backupmx": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 953,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 885,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "blog": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 587,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 576,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "umami": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 772,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 747,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "cswiki": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 722,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 813,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "mail": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 1927,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 822,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     },
     "teamspeak": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 318,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 189,
       "lastCode": 0,
       "since": "2026-09-12T03:09:21Z"
     },
     "vcard": {
       "status": "up",
-      "lastCheck": "2026-09-12T10:51:30Z",
-      "lastMs": 630,
+      "lastCheck": "2026-09-12T11:34:01Z",
+      "lastMs": 917,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z"
     }

@@ -20,6 +20,29 @@ issues, and the status page is published with GitHub Pages.
    variables → Actions → Variables** (see below).
 5. Run the **Uptime** workflow once from the Actions tab.
 
+## Custom domain
+
+Point DNS at GitHub, then set the domain under **Settings → Pages → Custom
+domain** and enable *Enforce HTTPS* once the certificate is issued.
+
+```
+# subdomain
+status  CNAME  <user>.github.io.
+
+# apex domain
+@  A     185.199.108.153, 185.199.109.153, 185.199.110.153, 185.199.111.153
+@  AAAA  2606:50c0:8000::153, 2606:50c0:8001::153, 2606:50c0:8002::153, 2606:50c0:8003::153
+```
+
+Because Pages is published from a workflow rather than a branch, no `CNAME`
+file is needed: the domain is stored in the repository's Pages configuration,
+and an existing `CNAME` file is ignored. Deployments cannot drop it.
+
+Verify the domain under account or organization **Settings → Pages** to keep
+someone else from claiming it if this repository is renamed or deleted. If DNS
+is proxied through Cloudflare, keep the record DNS-only until GitHub has issued
+the certificate.
+
 ## Monitors
 
 Every monitor is a repository variable named `MONITOR_<NAME>`. The name after

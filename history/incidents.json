@@ -15,7 +15,24 @@
       "backupmx"
     ],
     "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T00:02:41Z\n\nThis issue closes automatically once the monitor recovers.",
-    "maintenance": false
+    "maintenance": false,
+    "commentCount": 2,
+    "comments": [
+      {
+        "author": "sysmike",
+        "bot": false,
+        "createdAt": "2026-09-13T00:05:44Z",
+        "url": "https://github.com/sysmike/status-page/issues/2#issuecomment-5649567011",
+        "body": "This is a test"
+      },
+      {
+        "author": "github-actions[bot]",
+        "bot": true,
+        "createdAt": "2026-09-13T00:14:39Z",
+        "url": "https://github.com/sysmike/status-page/issues/2#issuecomment-5649612402",
+        "body": "Recovered after 12 minutes — 200 in 1071ms."
+      }
+    ]
   },
   {
     "number": 1,
@@ -34,6 +51,8 @@
       "mail"
     ],
     "body": "### Window\n\n2026-09-12 06:00 - 06:05 UTC\n\n### Expected impact\n\nMailservers unavailable for 5 minutes\n\n### Affected monitors\n\nBACKUPMX, MAIL\n\n### Notes\n\n_No response_",
-    "maintenance": true
+    "maintenance": true,
+    "commentCount": 0,
+    "comments": []
   }
 ]

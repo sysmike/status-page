@@ -8,15 +8,14 @@
     "closedAt": null,
     "labels": [
       "status",
-      "incident",
-      "maintenance"
+      "incident"
     ],
     "monitor": "backupmx",
     "monitors": [
       "backupmx"
     ],
     "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T00:02:41Z\n\nThis issue closes automatically once the monitor recovers.",
-    "maintenance": true
+    "maintenance": false
   },
   {
     "number": 1,

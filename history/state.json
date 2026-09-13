@@ -52,5 +52,11 @@
     "since": "2026-09-12T21:13:25Z",
     "failures": 0,
     "issue": null
+  },
+  "minecraft": {
+    "status": "up",
+    "since": "2026-09-13T12:57:48Z",
+    "failures": 0,
+    "issue": null
   }
 }

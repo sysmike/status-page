@@ -3,9 +3,9 @@
     "number": 2,
     "title": "Backup MX is down",
     "url": "https://github.com/sysmike/status-page/issues/2",
-    "state": "open",
+    "state": "closed",
     "createdAt": "2026-09-13T00:04:09Z",
-    "closedAt": null,
+    "closedAt": "2026-09-13T00:14:39Z",
     "labels": [
       "status",
       "incident"

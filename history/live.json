@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-13T00:12:54.351Z",
+  "generatedAt": "2026-09-13T00:14:40.570Z",
   "monitors": {
     "home": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
+      "lastCheck": "2026-09-13T00:14:36Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-12T21:13:25Z",
@@ -33,7 +33,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -42,7 +42,7 @@
     },
     "pangolin": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
+      "lastCheck": "2026-09-13T00:14:36Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-12T21:13:25Z",
@@ -72,7 +72,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -80,16 +80,16 @@
       ]
     },
     "backupmx": {
-      "status": "down",
-      "lastCheck": "2026-09-13T00:12:51Z",
-      "lastMs": 0,
-      "lastCode": 0,
-      "since": "2026-09-13T00:02:41Z",
+      "status": "up",
+      "lastCheck": "2026-09-13T00:14:36Z",
+      "lastMs": 1071,
+      "lastCode": 200,
+      "since": "2026-09-13T00:14:36Z",
       "uptime": {
-        "day": 33.33,
-        "week": 83.33,
-        "month": 83.33,
-        "quarter": 83.33
+        "day": 42.86,
+        "week": 84,
+        "month": 84,
+        "quarter": 84
       },
       "days": [
         {
@@ -111,17 +111,17 @@
         {
           "date": "2026-09-13",
           "state": "partial",
-          "checks": 6,
+          "checks": 7,
           "down": 4,
           "degraded": 0,
-          "avg": 857
+          "avg": 928
         }
       ]
     },
     "blog": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
-      "lastMs": 812,
+      "lastCheck": "2026-09-13T00:14:36Z",
+      "lastMs": 799,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -150,17 +150,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
-          "avg": 689
+          "avg": 705
         }
       ]
     },
     "mail": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
-      "lastMs": 901,
+      "lastCheck": "2026-09-13T00:14:36Z",
+      "lastMs": 927,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -189,17 +189,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
-          "avg": 726
+          "avg": 755
         }
       ]
     },
     "teamspeak": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
-      "lastMs": 494,
+      "lastCheck": "2026-09-13T00:14:36Z",
+      "lastMs": 560,
       "lastCode": 0,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -228,17 +228,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
-          "avg": 707
+          "avg": 686
         }
       ]
     },
     "umami": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
-      "lastMs": 1177,
+      "lastCheck": "2026-09-13T00:14:36Z",
+      "lastMs": 1183,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -267,17 +267,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
-          "avg": 909
+          "avg": 948
         }
       ]
     },
     "vcard": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:12:51Z",
-      "lastMs": 1274,
+      "lastCheck": "2026-09-13T00:14:36Z",
+      "lastMs": 1317,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -306,10 +306,10 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 6,
+          "checks": 7,
           "down": 0,
           "degraded": 0,
-          "avg": 1005
+          "avg": 1050
         }
       ]
     }
@@ -319,9 +319,9 @@
       "number": 2,
       "title": "Backup MX is down",
       "url": "https://github.com/sysmike/status-page/issues/2",
-      "state": "open",
+      "state": "closed",
       "createdAt": "2026-09-13T00:04:09Z",
-      "closedAt": null,
+      "closedAt": "2026-09-13T00:14:39Z",
       "labels": [
         "status",
         "incident"

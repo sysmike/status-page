@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-13T21:24:32.141Z",
+  "generatedAt": "2026-09-13T21:37:00.834Z",
   "monitors": {
     "home": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
+      "lastCheck": "2026-09-13T21:36:56Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-12T21:13:25Z",
@@ -33,7 +33,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -42,7 +42,7 @@
     },
     "pangolin": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
+      "lastCheck": "2026-09-13T21:36:56Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-12T21:13:25Z",
@@ -72,7 +72,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -80,16 +80,16 @@
       ]
     },
     "backupmx": {
-      "status": "down",
-      "lastCheck": "2026-09-13T21:24:30Z",
-      "lastMs": 0,
-      "lastCode": 0,
-      "since": "2026-09-13T21:17:37Z",
+      "status": "up",
+      "lastCheck": "2026-09-13T21:36:56Z",
+      "lastMs": 929,
+      "lastCode": 200,
+      "since": "2026-09-13T21:36:56Z",
       "uptime": {
-        "day": 66.67,
-        "week": 82.05,
-        "month": 82.05,
-        "quarter": 82.05
+        "day": 68.18,
+        "week": 82.5,
+        "month": 82.5,
+        "quarter": 82.5
       },
       "days": [
         {
@@ -111,17 +111,17 @@
         {
           "date": "2026-09-13",
           "state": "partial",
-          "checks": 21,
+          "checks": 22,
           "down": 7,
           "degraded": 0,
-          "avg": 1212
+          "avg": 1193
         }
       ]
     },
     "blog": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
-      "lastMs": 507,
+      "lastCheck": "2026-09-13T21:36:56Z",
+      "lastMs": 794,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -150,17 +150,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
-          "avg": 943
+          "avg": 936
         }
       ]
     },
     "mail": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
-      "lastMs": 541,
+      "lastCheck": "2026-09-13T21:36:56Z",
+      "lastMs": 907,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -189,16 +189,16 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
-          "avg": 989
+          "avg": 985
         }
       ]
     },
     "minecraft": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
+      "lastCheck": "2026-09-13T21:36:56Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-13T12:57:48Z",
@@ -228,7 +228,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 8,
+          "checks": 9,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -237,8 +237,8 @@
     },
     "teamspeak": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
-      "lastMs": 311,
+      "lastCheck": "2026-09-13T21:36:56Z",
+      "lastMs": 493,
       "lastCode": 0,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -267,17 +267,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
-          "avg": 896
+          "avg": 878
         }
       ]
     },
     "umami": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
-      "lastMs": 686,
+      "lastCheck": "2026-09-13T21:36:56Z",
+      "lastMs": 997,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -306,17 +306,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
-          "avg": 1354
+          "avg": 1338
         }
       ]
     },
     "vcard": {
       "status": "up",
-      "lastCheck": "2026-09-13T21:24:30Z",
-      "lastMs": 716,
+      "lastCheck": "2026-09-13T21:36:56Z",
+      "lastMs": 1164,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -345,10 +345,10 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 21,
+          "checks": 22,
           "down": 0,
           "degraded": 0,
-          "avg": 1414
+          "avg": 1403
         }
       ]
     }
@@ -358,9 +358,9 @@
       "number": 3,
       "title": "Backup MX is down",
       "url": "https://github.com/sysmike/status-page/issues/3",
-      "state": "open",
+      "state": "closed",
       "createdAt": "2026-09-13T21:19:21Z",
-      "closedAt": null,
+      "closedAt": "2026-09-13T21:36:59Z",
       "labels": [
         "status",
         "incident"
@@ -371,7 +371,7 @@
       ],
       "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T21:17:37Z\n\nThis issue closes automatically once the monitor recovers.",
       "maintenance": false,
-      "commentCount": 1,
+      "commentCount": 2,
       "comments": [
         {
           "author": "sysmike",
@@ -379,6 +379,13 @@
           "createdAt": "2026-09-13T21:20:53Z",
           "url": "https://github.com/sysmike/status-page/issues/3#issuecomment-5656223500",
           "body": "This is a test again"
+        },
+        {
+          "author": "github-actions[bot]",
+          "bot": true,
+          "createdAt": "2026-09-13T21:36:59Z",
+          "url": "https://github.com/sysmike/status-page/issues/3#issuecomment-5656314309",
+          "body": "Recovered after 19 minutes — 200 in 929ms."
         }
       ]
     },

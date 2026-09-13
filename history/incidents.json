@@ -1,5 +1,24 @@
 [
   {
+    "number": 2,
+    "title": "Backup MX is down",
+    "url": "https://github.com/sysmike/status-page/issues/2",
+    "state": "open",
+    "createdAt": "2026-09-13T00:04:09Z",
+    "closedAt": null,
+    "labels": [
+      "status",
+      "incident",
+      "maintenance"
+    ],
+    "monitor": "backupmx",
+    "monitors": [
+      "backupmx"
+    ],
+    "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T00:02:41Z\n\nThis issue closes automatically once the monitor recovers.",
+    "maintenance": true
+  },
+  {
     "number": 1,
     "title": "Maintenance: Updating Mailcow",
     "url": "https://github.com/sysmike/status-page/issues/1",

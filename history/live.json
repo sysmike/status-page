@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-09-13T00:04:09.542Z",
+  "generatedAt": "2026-09-13T00:05:22.908Z",
   "monitors": {
     "home": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
+      "lastCheck": "2026-09-13T00:05:20Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-12T21:13:25Z",
@@ -33,7 +33,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -42,7 +42,7 @@
     },
     "pangolin": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
+      "lastCheck": "2026-09-13T00:05:20Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-12T21:13:25Z",
@@ -72,7 +72,7 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
           "avg": 0
@@ -81,15 +81,15 @@
     },
     "backupmx": {
       "status": "down",
-      "lastCheck": "2026-09-13T00:04:05Z",
+      "lastCheck": "2026-09-13T00:05:20Z",
       "lastMs": 0,
       "lastCode": 0,
       "since": "2026-09-13T00:02:41Z",
       "uptime": {
-        "day": 50,
-        "week": 90.91,
-        "month": 90.91,
-        "quarter": 90.91
+        "day": 40,
+        "week": 86.96,
+        "month": 86.96,
+        "quarter": 86.96
       },
       "days": [
         {
@@ -111,8 +111,8 @@
         {
           "date": "2026-09-13",
           "state": "partial",
-          "checks": 4,
-          "down": 2,
+          "checks": 5,
+          "down": 3,
           "degraded": 0,
           "avg": 857
         }
@@ -120,8 +120,8 @@
     },
     "blog": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
-      "lastMs": 747,
+      "lastCheck": "2026-09-13T00:05:20Z",
+      "lastMs": 578,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -150,17 +150,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
-          "avg": 686
+          "avg": 664
         }
       ]
     },
     "mail": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
-      "lastMs": 820,
+      "lastCheck": "2026-09-13T00:05:20Z",
+      "lastMs": 642,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -189,17 +189,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
-          "avg": 703
+          "avg": 691
         }
       ]
     },
     "teamspeak": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
-      "lastMs": 1998,
+      "lastCheck": "2026-09-13T00:05:20Z",
+      "lastMs": 433,
       "lastCode": 0,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -228,17 +228,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
-          "avg": 828
+          "avg": 749
         }
       ]
     },
     "umami": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
-      "lastMs": 1048,
+      "lastCheck": "2026-09-13T00:05:20Z",
+      "lastMs": 671,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -267,17 +267,17 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
-          "avg": 901
+          "avg": 855
         }
       ]
     },
     "vcard": {
       "status": "up",
-      "lastCheck": "2026-09-13T00:04:05Z",
-      "lastMs": 1305,
+      "lastCheck": "2026-09-13T00:05:20Z",
+      "lastMs": 776,
       "lastCode": 200,
       "since": "2026-09-12T03:09:21Z",
       "uptime": {
@@ -306,15 +306,34 @@
         {
           "date": "2026-09-13",
           "state": "up",
-          "checks": 4,
+          "checks": 5,
           "down": 0,
           "degraded": 0,
-          "avg": 995
+          "avg": 951
         }
       ]
     }
   },
   "incidents": [
+    {
+      "number": 2,
+      "title": "Backup MX is down",
+      "url": "https://github.com/sysmike/status-page/issues/2",
+      "state": "open",
+      "createdAt": "2026-09-13T00:04:09Z",
+      "closedAt": null,
+      "labels": [
+        "status",
+        "incident",
+        "maintenance"
+      ],
+      "monitor": "backupmx",
+      "monitors": [
+        "backupmx"
+      ],
+      "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T00:02:41Z\n\nThis issue closes automatically once the monitor recovers.",
+      "maintenance": true
+    },
     {
       "number": 1,
       "title": "Maintenance: Updating Mailcow",

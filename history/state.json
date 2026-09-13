@@ -2,8 +2,8 @@
   "backupmx": {
     "status": "down",
     "since": "2026-09-13T21:17:37Z",
-    "failures": 1,
-    "issue": null
+    "failures": 2,
+    "issue": 3
   },
   "blog": {
     "status": "up",

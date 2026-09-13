@@ -2,7 +2,7 @@
   "backupmx": {
     "status": "down",
     "since": "2026-09-13T21:17:37Z",
-    "failures": 2,
+    "failures": 3,
     "issue": 3
   },
   "blog": {

@@ -1,5 +1,33 @@
 [
   {
+    "number": 3,
+    "title": "Backup MX is down",
+    "url": "https://github.com/sysmike/status-page/issues/3",
+    "state": "open",
+    "createdAt": "2026-09-13T21:19:21Z",
+    "closedAt": null,
+    "labels": [
+      "status",
+      "incident"
+    ],
+    "monitor": "backupmx",
+    "monitors": [
+      "backupmx"
+    ],
+    "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T21:17:37Z\n\nThis issue closes automatically once the monitor recovers.",
+    "maintenance": false,
+    "commentCount": 1,
+    "comments": [
+      {
+        "author": "sysmike",
+        "bot": false,
+        "createdAt": "2026-09-13T21:20:53Z",
+        "url": "https://github.com/sysmike/status-page/issues/3#issuecomment-5656223500",
+        "body": "This is a test again"
+      }
+    ]
+  },
+  {
     "number": 2,
     "title": "Backup MX is down",
     "url": "https://github.com/sysmike/status-page/issues/2",

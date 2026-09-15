@@ -14,6 +14,7 @@
     "monitors": [
       "backupmx"
     ],
+    "startsAt": null,
     "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T21:17:37Z\n\nThis issue closes automatically once the monitor recovers.",
     "maintenance": false,
     "commentCount": 2,
@@ -49,6 +50,7 @@
     "monitors": [
       "backupmx"
     ],
+    "startsAt": null,
     "body": "**Backup MX** stopped responding as expected.\n\n- Error: fetch failed\n- Response code: none\n- First failure: 2026-09-13T00:02:41Z\n\nThis issue closes automatically once the monitor recovers.",
     "maintenance": false,
     "commentCount": 2,
@@ -85,6 +87,7 @@
       "backupmx",
       "mail"
     ],
+    "startsAt": "2026-09-12T06:00:00.000Z",
     "body": "### Window\n\n2026-09-12 06:00 - 06:05 UTC\n\n### Expected impact\n\nMailservers unavailable for 5 minutes\n\n### Affected monitors\n\nBACKUPMX, MAIL\n\n### Notes\n\n_No response_",
     "maintenance": true,
     "commentCount": 0,

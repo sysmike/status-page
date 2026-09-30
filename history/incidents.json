@@ -2,7 +2,7 @@
   {
     "number": 3,
     "title": "Backup MX is down",
-    "url": "https://github.com/sysmike/status-page/issues/3",
+    "url": "https://github.com/sysmike/stillup/issues/3",
     "state": "closed",
     "createdAt": "2026-09-13T21:19:21Z",
     "closedAt": "2026-09-13T21:36:59Z",
@@ -39,7 +39,7 @@
   {
     "number": 2,
     "title": "Backup MX is down",
-    "url": "https://github.com/sysmike/status-page/issues/2",
+    "url": "https://github.com/sysmike/stillup/issues/2",
     "state": "closed",
     "createdAt": "2026-09-13T00:04:09Z",
     "closedAt": "2026-09-13T00:14:39Z",
@@ -76,7 +76,7 @@
   {
     "number": 1,
     "title": "Maintenance: Updating Mailcow",
-    "url": "https://github.com/sysmike/status-page/issues/1",
+    "url": "https://github.com/sysmike/stillup/issues/1",
     "state": "closed",
     "createdAt": "2026-09-12T03:31:31Z",
     "closedAt": "2026-09-12T10:02:03Z",

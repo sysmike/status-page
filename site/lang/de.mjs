@@ -120,10 +120,21 @@ export default {
   'issue.autoClose': 'Dieses Issue wird automatisch geschlossen, sobald der Monitor wieder antwortet.',
   'issue.recovered': 'Wieder erreichbar nach {duration} — {code} in {ms}ms.',
 
+  'issue.updateTitle': 'Ein Update ändert Workflows und wartet, bis Sync von Hand läuft',
+  'issue.updateIntro': 'Das Projekt, dem diese Seite folgt, hat ein Update, das seine Workflows ändert: {commit}.',
+  'issue.updateWhy':
+    'GitHub kann einen geänderten Workflow zur Freigabe zurückhalten, bevor er wieder läuft, und ein zurückgehaltener Uptime-Workflow prüft nichts, bis ihn jemand freigibt. Deshalb lässt der nächtliche Sync dieses Update samt Code für einen Lauf liegen, der von Hand gestartet wird.',
+  'issue.updateSteps':
+    '[Sync]({url}) im Actions-Tab ausführen. Danach den Actions-Tab noch einmal ansehen und jeden Lauf freigeben, den GitHub zurückhält.',
+  'issue.updateAutoClose': 'Dieses Issue wird automatisch geschlossen, sobald das Update übernommen ist.',
+  'issue.updateApplied': 'Übernommen: Die Seite läuft jetzt mit {commit}.',
+
   'notify.down': '{name} ist ausgefallen',
   'notify.degraded': '{name} ist beeinträchtigt',
   'notify.up': '{name} ist wieder erreichbar',
   'notify.upAfter': '{name} ist wieder erreichbar nach {duration}',
+  'notify.update': '{name}: Ein Update ändert Workflows und wird erst übernommen, wenn Sync von Hand läuft',
+  'field.update': 'Update',
 
   'a11y.toggleTheme': 'Design umschalten',
   'a11y.close': 'Schließen',
